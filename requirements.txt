@@ -1,0 +1,13 @@
+numpy==1.26.*
+torch==2.0.1
+torchvision==0.15.2
+huggingface_hub==0.25.2
+accelerate==1.0.1
+diffusers==0.27.0
+einops
+omegaconf
+transformers==4.32.1
+eva-decord
+matplotlib
+opencv-python==4.10.0.84
+onnxruntime==1.19.2

@@ -62,7 +62,7 @@ class Predictor(BasePredictor):
             if not os.path.exists(dest_path.replace(".tar", "")):
                 download_weights(url, dest_path)
 
-        self.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        self.device = torch.device("cuda" if torch.cuda.is_available() else "mps:0" if torch.backends.mps.is_available() else "cpu")
         print(f"Using device: {self.device}")
 
         # Move imports here and make them global
